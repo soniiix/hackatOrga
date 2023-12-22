@@ -11,7 +11,7 @@ namespace hackatOrga.Models
     public class InscriptionHackathon
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; } 
+        public int id { get; set; }
         public DateTime date { get; set; }
         [ForeignKey(nameof(Participant))]
         public int idParticipant { get; set; }

@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using hackatOrga.Models;
-using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace hackatOrga
