@@ -14,9 +14,9 @@ namespace hackatOrga
             InscriptionHackathon uneInscriptionHackathon = new InscriptionHackathon();
             uneInscriptionHackathon = cnx.InscriptionHackathons.Find(3);   //album 50 chargé
 
-            System.Diagnostics.Debug.WriteLine(uneInscriptionHackathon.date);   //Ok
-            Participant unParticipant = uneInscriptionHackathon.Participant;                   //On veut l'artiste de l'album
-            System.Diagnostics.Debug.WriteLine(unParticipant.nom);  //plante : l'artiste n'est pas chargé
+            System.Diagnostics.Debug.WriteLine(uneInscriptionHackathon.date);
+            Participant unParticipant = uneInscriptionHackathon.Participant;
+            System.Diagnostics.Debug.WriteLine(unParticipant.nom);
 
             //--- Lancement du formulaire ---
             ApplicationConfiguration.Initialize();

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace hackatOrga.Models
 {
-    [Table("inscritpion_atelier")]
+    [Table("inscription_atelier")]
     public class InscriptionAtelier
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -16,10 +16,10 @@ namespace hackatOrga.Models
         public string nom { get; set; }
         public string prenom { get; set; }
         public string mail { get; set; }
-        [ForeignKey(nameof(Atelier))]
+        [ForeignKey(nameof(Evenement))]
         public int idAtelier { get; set; }
 
-        public virtual Atelier Atelier { get; set; }
+        public virtual Evenement Evenement { get; set; }
 
 
     }
