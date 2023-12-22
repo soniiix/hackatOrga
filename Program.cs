@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using hackatOrga.Models;    //// <--- remplacer xxx par le nom de votre projet
+using hackatOrga.Models;
 
 namespace hackatOrga
 {
@@ -12,7 +12,7 @@ namespace hackatOrga
             MonDbContext cnx = new MonDbContext();
 
             InscriptionHackathon uneInscriptionHackathon = new InscriptionHackathon();
-            uneInscriptionHackathon = cnx.InscriptionHackathons.Find(3);   //album 50 chargé
+            uneInscriptionHackathon = cnx.InscriptionHackathons.Find(3);
 
             System.Diagnostics.Debug.WriteLine(uneInscriptionHackathon.date);
             Participant unParticipant = uneInscriptionHackathon.Participant;
