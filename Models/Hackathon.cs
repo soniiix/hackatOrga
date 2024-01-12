@@ -22,5 +22,8 @@ namespace hackatOrga.Models
         public DateTime dateFin { get; set; }
         public TimeOnly heureDebut { get; set; }
         public TimeOnly heureFin { get; set; }
+
+        [ForeignKey("idHackathon")]
+        public ICollection<InscriptionHackathon> InscriptionHackathons { get; set; }
     }
 }

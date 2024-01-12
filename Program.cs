@@ -11,12 +11,22 @@ namespace hackatOrga
             //connexion à la BD
             MonDbContext cnx = new MonDbContext();
 
-            InscriptionHackathon uneInscriptionHackathon = new InscriptionHackathon();
-            uneInscriptionHackathon = cnx.InscriptionHackathons.Find(3);
-
-            System.Diagnostics.Debug.WriteLine(uneInscriptionHackathon.date);
-            Participant unParticipant = uneInscriptionHackathon.Participant;
-            System.Diagnostics.Debug.WriteLine(unParticipant.nom);
+            //Création d'un nouvel artiste
+            Participant newParticipant = new Participant()
+            {
+                nom = "Gims",
+                prenom = "Rafaelo",
+                mail = "Rafaelo.gims@gaild.com",
+                tel = 254545484,
+                dateNaissance = new DateTime(1999, 02, 12),
+                lienPortfolio = "httpRafaelo",
+                mdp = "Rafaelo",
+                roles =""
+            };
+            //Ajout de l'objet au dataContext
+            cnx.Participants.Add(newParticipant);
+            //Enregistrement dans la BD
+            cnx.SaveChanges();
 
             //--- Lancement du formulaire ---
             ApplicationConfiguration.Initialize();

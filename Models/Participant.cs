@@ -19,6 +19,7 @@ namespace hackatOrga.Models
         public DateTime dateNaissance { get; set; }
         public string lienPortfolio { get; set; }
         public string mdp { get; set; }
+        public string roles { get; set; }
 
         [ForeignKey("idParticipant")]
         public ICollection<InscriptionHackathon> InscriptionHackathons { get; set; }

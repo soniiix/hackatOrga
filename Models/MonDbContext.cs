@@ -21,8 +21,6 @@ namespace hackatOrga
         public virtual DbSet<Participant> Participants { get; set; }
         public virtual DbSet<Hackathon> Hackathons { get; set; }
         public virtual DbSet<InscriptionHackathon> InscriptionHackathons { get; set; }
-        public virtual DbSet<HackathonEvenement> HackathonEvenements { get; set; }
-        public virtual DbSet<Evenement> Evenements { get; set; }
-        public virtual DbSet<Intervenant> Intervenants { get; set; }
+
     }
 }
